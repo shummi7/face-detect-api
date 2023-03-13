@@ -4,7 +4,7 @@ const stub = ClarifaiStub.grpc();
 
 const metadata = new grpc.Metadata();
 const api_key = process.env.API_KEY;
-metadata.set("authorization", `Key ${api_key}`);
+metadata.set("authorization", `Key ${api_key}`); 
 const handleImageUrl = (req, res) => {
   stub.PostModelOutputs(
     {
